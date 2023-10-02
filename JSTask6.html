@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f695d5743b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(190, 190, 190);
+    }
+    .uname{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding: 30px;
+    }
+    .container1, .container2 {
+        display: flex;
+        padding: 5px;
+        border-radius: 5px;
+        width: 300px;
+    }
+    .container1 input, .container2 input {
+        border: none; 
+        height: 43.5px;
+        flex-grow: 1;
+    }
+    .container3{
+        height: 43.5px;
+        width: 300px;
+    }
+    .login{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(52, 160, 254);
+        color: white;
+        font-size: x-large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .icon1 i, .icon2 i {
+        padding-bottom: 6.75px;
+        padding-top: 6.75px;
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: #fff;
+        border-right: 1px solid #000000;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    .remaining1{
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+    }
+    .remaining2{
+        display: flex;
+        gap: 5px;
+    }
+</style>
+<body>
+    <h1 class="header" style="display: flex; justify-content: center; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"><em>Instagram</em></h1>
+    <div class="uname">
+        <div class="container1">
+            <span class="icon1">
+                <i class="fas fa-user fa-2x"></i>
+            </span>
+            <input type="text" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: x-large;" placeholder="Username">
+        </div>
+        <div class="container2">
+            <span class="icon2">
+                <i class="fas fa-lock fa-2x"></i>
+            </span>
+            <input type="password" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: x-large;" placeholder="Password">
+        </div>
+        <div class="container3">
+            <button class="login">Log in</button>
+        </div>
+        <div class="remaining1">
+            <div class="remember">
+                <input type="checkbox" id="remember" name="remember" value="remember me">
+                <label for="remember" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: larger;">Remember me</label>
+            </div>
+            <div class="fpassword">
+                <a href="#" style="color: rgb(52, 160, 254); text-decoration: none; font-family: 
+                'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: larger;">Forgot password?</a>
+            </div>
+        </div>
+        <div class="remaining2">
+            <p class="sentence" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin:0;">Don't have an account!</p>
+            <a href="#" style="text-decoration: none; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color:rgb(52, 160, 254) ;">
+                Sign up here</a>
+        </div>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="timeButton">Show Time</button>
+    <br>
+    <br>
+    <button id="dateButton">Show Date</button>
+    <p id="output"></p>
+    <script>
+        const timeButton = document.getElementById("timeButton");
+        const dateButton = document.getElementById("dateButton");
+        const outputElement = document.getElementById("output");
+        timeButton.addEventListener("click", function () {
+            const currentTime = new Date();
+            const timeString = currentTime.toLocaleTimeString();
+            outputElement.textContent = `Current Time: ${timeString}`;
+        });
+        dateButton.addEventListener("click", function () {
+            const currentDate = new Date();
+            const dateString = currentDate.toLocaleDateString();
+            outputElement.textContent = `Current Date: ${dateString}`;
+        });
+    </script>
+</body>
+</html>

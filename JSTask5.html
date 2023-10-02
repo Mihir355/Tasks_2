@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .warning {
+            color: red;
+        }
+        .error {
+            border: 1px solid red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Name: </label>
+    <input type="text" id="name" name="name">
+    <span id="nameWarning" class="warning"></span>
+    <br><br>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email">
+    <span id="emailWarning" class="warning"></span>
+    <br><br>
+    <label for="website">Website: </label>
+    <input type="url" id="website" name="website">
+    <span id="websiteWarning" class="warning"></span>
+    <br><br>
+    <label for="message">Message: </label>
+    <textarea id="message" name="message" rows="3" cols="20"></textarea>
+    <span id="messageWarning" class="warning"></span>
+    <br><br>
+    <button id="submitbutton">Submit</button>
+    <script>
+        document.getElementById("submitbutton").addEventListener("click", function (event) {
+            event.preventDefault();
+            const warningElements = document.getElementsByClassName("warning");
+            for (const warningElement of warningElements) {
+                warningElement.textContent = "";
+            }
+            const errorElements = document.getElementsByClassName("error");
+            for (const errorElement of errorElements) {
+                errorElement.classList.remove("error");
+            }
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const website = document.getElementById("website").value.trim();
+            const message = document.getElementById("message").value.trim();
+            if (name === "") {
+                document.getElementById("nameWarning").textContent = "Name is required";
+                document.getElementById("name").classList.add("error");
+            }
+            if (email === "") {
+                document.getElementById("emailWarning").textContent = "Email is required";
+                document.getElementById("email").classList.add("error");
+            }
+            if (website === "") {
+                document.getElementById("websiteWarning").textContent = "Website is required";
+                document.getElementById("website").classList.add("error");
+            }
+            if (message === "") {
+                document.getElementById("messageWarning").textContent = "Message is required";
+                document.getElementById("message").classList.add("error");
+            }
+            });
+    </script>
+</body>
+</html>
